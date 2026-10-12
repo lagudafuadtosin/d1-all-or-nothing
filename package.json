@@ -1,0 +1,44 @@
+{
+  "name": "d1-all-or-nothing",
+  "version": "1.0.0",
+  "description": "Writes on Cloudflare D1 that all happen or none do, even when another request changed the rows you read. D1 has no transactions you can read inside.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  },
+  "keywords": [
+    "cloudflare",
+    "cloudflare-d1",
+    "d1",
+    "workers",
+    "cloudflare-workers",
+    "transaction",
+    "optimistic-locking",
+    "race-condition",
+    "sqlite",
+    "drizzle"
+  ],
+  "author": "Fuad Laguda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagudafuadtosin/d1-all-or-nothing.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "drizzle-orm": "^0.45.4",
+    "wrangler": "4.149.0"
+  }
+}
